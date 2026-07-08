@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Unity Game</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <h1>My Unity Game</h1>
+
+    <nav>
+
+        <a href="#home">ホーム</a>
+        <a href="#game">ゲーム</a>
+        <a href="#shop">ショップ</a>
+        <a href="#contact">お問い合わせ</a>
+
+    </nav>
+
+</header>
+
+<section id="home">
+
+    <h2>ようこそ！</h2>
+
+    <p>
+        Unityで制作したゲームを公開しています。
+    </p>
+
+</section>
+
+<section id="game">
+
+    <h2>ゲーム紹介</h2>
+
+    <img src="images/logo.png" width="300">
+
+    <p>
+
+        FPSゲーム
+
+    </p>
+
+</section>
+
+<section id="shop">
+
+    <h2>課金アイテム</h2>
+
+    <button onclick="buyItem()">
+
+        購入する
+
+    </button>
+
+</section>
+
+<section id="contact">
+
+    <h2>お問い合わせ</h2>
+
+    <p>
+
+        example@gmail.com
+
+    </p>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
+body{
+
+    margin:0;
+
+    font-family:sans-serif;
+
+    background:#222;
+
+    color:white;
+
+}
+
+header{
+
+    background:#333;
+
+    padding:20px;
+
+}
+
+nav a{
+
+    color:white;
+
+    margin-right:20px;
+
+    text-decoration:none;
+
+}
+
+section{
+
+    padding:40px;
+
+}
+
+button{
+
+    padding:15px;
+
+    font-size:20px;
+
+}
+function buyItem(){
+
+    alert("決済ページへ移動します。");
+
+    // Stripe CheckoutなどのURLへ移動
+    // window.location.href = "https://yourdomain.com/payment";
+
+}
