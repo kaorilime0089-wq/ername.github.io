@@ -4,10 +4,9 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>My Game Service</title>
+<title>My Game Shop</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -19,12 +18,12 @@
 
 <header>
 
-<img src="images/logo.png" class="logo" alt="ゲームロゴ">
+<img src="images/logo.png" class="logo">
 
-<h1>My Game Service</h1>
+<h1>My Unity Game</h1>
 
 <p>
-Unityで制作したオリジナルゲームサービス
+オリジナルゲーム販売サイト
 </p>
 
 </header>
@@ -33,20 +32,20 @@ Unityで制作したオリジナルゲームサービス
 
 <section class="game">
 
+
 <h2>🎮 ゲーム紹介</h2>
 
 
-<img src="images/game.jpg" class="gameImage" alt="ゲーム画像">
+<img src="images/game.jpg" class="gameImage">
 
 
 <p>
-アクション・FPS・ホラーなどの
-オリジナルゲームを提供しています。
+Unityで制作したアクションゲームです。
 </p>
 
 
-<button onclick="startGame()">
-ゲームをプレイ
+<button onclick="playGame()">
+ゲームを開始
 </button>
 
 
@@ -57,11 +56,12 @@ Unityで制作したオリジナルゲームサービス
 
 <section class="member">
 
+
 <h2>👤 会員管理</h2>
 
 
 <p>
-会員登録するとプレミアム機能を利用できます。
+会員登録すると限定機能が利用できます。
 </p>
 
 
@@ -70,9 +70,14 @@ Unityで制作したオリジナルゲームサービス
 </button>
 
 
-<button onclick="register()">
+<button onclick="registerUser()">
 会員登録
 </button>
+
+
+<p id="userStatus">
+未ログイン
+</p>
 
 
 </section>
@@ -80,19 +85,69 @@ Unityで制作したオリジナルゲームサービス
 
 
 
-<section class="payment">
-
-<h2>💎 プレミアムサービス</h2>
+<section class="shop">
 
 
-<p>
-月額980円で特別コンテンツを利用できます。
-</p>
+<h2>💎 課金アイテムショップ</h2>
 
 
-<button onclick="buy()">
+
+<div class="item">
+
+
+<h3>コイン100個</h3>
+
+<p>価格：120円</p>
+
+
+<button onclick="buyItem('コイン100個')">
+
 購入する
+
 </button>
+
+
+</div>
+
+
+
+
+<div class="item">
+
+
+<h3>プレミアムキャラクター</h3>
+
+<p>価格：500円</p>
+
+
+<button onclick="buyItem('プレミアムキャラクター')">
+
+購入する
+
+</button>
+
+
+</div>
+
+
+
+
+<div class="item">
+
+
+<h3>広告削除</h3>
+
+<p>価格：980円</p>
+
+
+<button onclick="buyItem('広告削除')">
+
+購入する
+
+</button>
+
+
+</div>
 
 
 </section>
@@ -103,7 +158,7 @@ Unityで制作したオリジナルゲームサービス
 <footer>
 
 <p>
-© 2026 My Game Service
+©2026 My Game Shop
 </p>
 
 </footer>
@@ -114,35 +169,43 @@ Unityで制作したオリジナルゲームサービス
 <script>
 
 
-function startGame(){
+function playGame(){
 
-alert("ゲームを開始します");
+alert("ゲームを起動します");
 
 }
+
 
 
 function login(){
 
-alert("ログイン画面へ移動します");
+document.getElementById("userStatus").innerHTML =
+"ログインしました";
 
 }
 
 
-function register(){
 
-alert("会員登録画面へ移動します");
+function registerUser(){
+
+document.getElementById("userStatus").innerHTML =
+"会員登録しました";
 
 }
 
 
-function buy(){
 
-alert("決済ページへ移動します");
+function buyItem(item){
+
+alert(
+item + " の購入ページへ移動します"
+);
 
 }
 
 
 </script>
+
 
 
 </body>
