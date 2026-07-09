@@ -2,131 +2,156 @@
 <html lang="ja">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Unity Game</title>
 
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Game Service</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
+
 <header>
 
-    <h1>My Unity Game</h1>
+<img src="images/logo.png" class="logo" alt="ロゴ">
 
-    <nav>
+<h1>My Game Service</h1>
 
-        <a href="#home">ホーム</a>
-        <a href="#game">ゲーム</a>
-        <a href="#shop">ショップ</a>
-        <a href="#contact">お問い合わせ</a>
-
-    </nav>
+<p>
+最高のゲーム体験を提供するゲームサービス
+</p>
 
 </header>
 
-<section id="home">
 
-    <h2>ようこそ！</h2>
 
-    <p>
-        Unityで制作したゲームを公開しています。
-    </p>
+<section class="game">
 
-</section>
+<h2>🎮 ゲーム紹介</h2>
 
-<section id="game">
 
-    <h2>ゲーム紹介</h2>
+<img src="images/game.jpg" class="gameImage" alt="ゲーム画像">
 
-    <img src="images/logo.png" width="300">
 
-    <p>
+<p>
+Unityで制作したオリジナルゲームです。
+</p>
 
-        FPSゲーム
 
-    </p>
+<button onclick="playGame()">
+ゲームをプレイ
+</button>
+
 
 </section>
 
-<section id="shop">
 
-    <h2>課金アイテム</h2>
 
-    <button onclick="buyItem()">
 
-        購入する
+<section class="member">
 
-    </button>
+
+<h2>👤 会員管理</h2>
+
+
+<p>
+会員登録するとプレミアム機能を利用できます。
+</p>
+
+
+<button onclick="login()">
+ログイン
+</button>
+
+
+<button onclick="register()">
+会員登録
+</button>
+
 
 </section>
 
-<section id="contact">
 
-    <h2>お問い合わせ</h2>
 
-    <p>
 
-        example@gmail.com
+<section class="payment">
 
-    </p>
+
+<h2>💎 プレミアムサービス</h2>
+
+
+<p>
+月額980円で特別機能を利用できます。
+</p>
+
+
+<button onclick="payment()">
+購入する
+</button>
+
 
 </section>
 
-<script src="script.js"></script>
+
+
+
+<footer>
+
+<p>
+© 2026 My Game Service
+</p>
+
+</footer>
+
+
+
+
+<script>
+
+
+function playGame(){
+
+alert("ゲームを開始します");
+
+}
+
+
+
+function login(){
+
+alert("ログイン画面へ移動します");
+
+}
+
+
+
+function register(){
+
+alert("会員登録画面へ移動します");
+
+}
+
+
+
+function payment(){
+
+alert("決済ページへ移動します");
+
+}
+
+
+
+</script>
+
+
 
 </body>
 
 </html>
-body{
 
-    margin:0;
-
-    font-family:sans-serif;
-
-    background:#222;
-
-    color:white;
-
-}
-
-header{
-
-    background:#333;
-
-    padding:20px;
-
-}
-
-nav a{
-
-    color:white;
-
-    margin-right:20px;
-
-    text-decoration:none;
-
-}
-
-section{
-
-    padding:40px;
-
-}
-
-button{
-
-    padding:15px;
-
-    font-size:20px;
-
-}
-function buyItem(){
-
-    alert("決済ページへ移動します。");
-
-    // Stripe CheckoutなどのURLへ移動
-    // window.location.href = "https://yourdomain.com/payment";
-
-}
