@@ -19,12 +19,12 @@
 
 <header>
 
-<img src="images/logo.png" class="logo" alt="ロゴ">
+<img src="images/logo.png" class="logo" alt="ゲームロゴ">
 
 <h1>My Game Service</h1>
 
 <p>
-最高のゲーム体験を提供するゲームサービス
+Unityで制作したオリジナルゲームサービス
 </p>
 
 </header>
@@ -40,11 +40,12 @@
 
 
 <p>
-Unityで制作したオリジナルゲームです。
+アクション・FPS・ホラーなどの
+オリジナルゲームを提供しています。
 </p>
 
 
-<button onclick="playGame()">
+<button onclick="startGame()">
 ゲームをプレイ
 </button>
 
@@ -55,7 +56,6 @@ Unityで制作したオリジナルゲームです。
 
 
 <section class="member">
-
 
 <h2>👤 会員管理</h2>
 
@@ -82,16 +82,15 @@ Unityで制作したオリジナルゲームです。
 
 <section class="payment">
 
-
 <h2>💎 プレミアムサービス</h2>
 
 
 <p>
-月額980円で特別機能を利用できます。
+月額980円で特別コンテンツを利用できます。
 </p>
 
 
-<button onclick="payment()">
+<button onclick="buy()">
 購入する
 </button>
 
@@ -115,12 +114,11 @@ Unityで制作したオリジナルゲームです。
 <script>
 
 
-function playGame(){
+function startGame(){
 
 alert("ゲームを開始します");
 
 }
-
 
 
 function login(){
@@ -130,7 +128,6 @@ alert("ログイン画面へ移動します");
 }
 
 
-
 function register(){
 
 alert("会員登録画面へ移動します");
@@ -138,20 +135,16 @@ alert("会員登録画面へ移動します");
 }
 
 
-
-function payment(){
+function buy(){
 
 alert("決済ページへ移動します");
 
 }
 
 
-
 </script>
-
 
 
 </body>
 
 </html>
-
