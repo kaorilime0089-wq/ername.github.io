@@ -19,6 +19,8 @@
 
 <header>
 
+<img src="./images/logo.png" class="logo" alt="ロゴ">
+
 <h1>My Game Service</h1>
 
 <p>
@@ -31,13 +33,14 @@
 
 <section class="game">
 
-
 <h2>🎮 ゲーム紹介</h2>
 
 
-<!-- game.jpg画像表示 -->
+<!-- ゲーム画像 -->
 
-<img src="OHT86_tudukukoudainanouchi_TP_V (1)" class="gameImage">
+<img src="./images/game.jpg" 
+     class="gameImage" 
+     alt="ゲーム画像">
 
 
 <p>
@@ -59,7 +62,6 @@ Unityで制作したオリジナルゲームです。
 
 <section class="member">
 
-
 <h2>👤 会員管理</h2>
 
 
@@ -68,17 +70,13 @@ Unityで制作したオリジナルゲームです。
 </p>
 
 
-<button>
-
+<button onclick="login()">
 ログイン
-
 </button>
 
 
-<button>
-
+<button onclick="register()">
 会員登録
-
 </button>
 
 
@@ -89,7 +87,6 @@ Unityで制作したオリジナルゲームです。
 
 <section class="payment">
 
-
 <h2>💎 プレミアムサービス</h2>
 
 
@@ -98,10 +95,8 @@ Unityで制作したオリジナルゲームです。
 </p>
 
 
-<button>
-
+<button onclick="payment()">
 購入する
-
 </button>
 
 
@@ -113,15 +108,15 @@ Unityで制作したオリジナルゲームです。
 <footer>
 
 <p>
-© 2026 My Game Service
+©2026 My Game Service
 </p>
 
 </footer>
 
 
 
-
 <script>
+
 
 function playGame(){
 
@@ -129,9 +124,34 @@ alert("ゲームを開始します");
 
 }
 
+
+function login(){
+
+alert("ログイン画面へ移動します");
+
+}
+
+
+function register(){
+
+alert("会員登録画面へ移動します");
+
+}
+
+
+function payment(){
+
+alert("決済ページへ移動します");
+
+}
+
+
 </script>
 
 
 </body>
 
 </html>
+
+
+
