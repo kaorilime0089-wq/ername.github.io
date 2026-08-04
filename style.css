@@ -11,33 +11,61 @@ header{
     padding:20px;
 }
 
+
 .logo{
     width:180px;
     height:auto;
 }
 
+
+/* ゲーム画像 */
+
 .gameImage{
+
     width:700px;
+
     max-width:90%;
+
     height:auto;
+
     border-radius:10px;
+
     margin:20px auto;
+
     display:block;
+
 }
+
+
 
 section{
+
     padding:40px;
+
 }
+
+
 
 button{
+
     padding:12px 25px;
+
     font-size:18px;
+
     cursor:pointer;
+
 }
 
+
+
 footer{
+
     background:#333;
+
     color:white;
+
     padding:20px;
+
     margin-top:40px;
+
 }
