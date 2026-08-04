@@ -4,167 +4,152 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>My Game Shop</title>
+<title>My Game Service</title>
 
 <link rel="stylesheet" href="style.css">
 
 </head>
 
+
 <body>
+
 
 <header>
 
 <img src="images/logo.png" class="logo" alt="ロゴ">
 
-<h1>My Unity Game</h1>
+<h1>My Game Service</h1>
 
 <p>
-オリジナルゲーム販売サイト
+最高のゲーム体験を提供するゲームサービス
 </p>
 
 </header>
 
-<!-- ゲーム紹介 -->
+
+
 <section class="game">
 
 <h2>🎮 ゲーム紹介</h2>
 
+
 <img src="images/game.jpg" class="gameImage" alt="ゲーム画像">
 
+
 <p>
-Unityで制作したアクションゲームです。
-FPS・ホラー・アクションなど様々なゲームを制作しています。
+Unityで制作したオリジナルゲームです。
 </p>
 
+
 <button onclick="playGame()">
-ゲームを開始
+ゲームをプレイ
 </button>
 
-<h3>📷 ゲームスクリーンショット</h3>
-
-<div class="gallery">
-
-<img src="images/screenshot1.jpg" alt="スクリーンショット1">
-
-<img src="images/screenshot2.jpg" alt="スクリーンショット2">
-
-<img src="images/screenshot3.jpg" alt="スクリーンショット3">
-
-</div>
 
 </section>
 
-<!-- 会員管理 -->
+
+
+
 <section class="member">
+
 
 <h2>👤 会員管理</h2>
 
+
 <p>
-会員登録すると限定機能が利用できます。
+会員登録するとプレミアム機能を利用できます。
 </p>
+
 
 <button onclick="login()">
 ログイン
 </button>
 
-<button onclick="registerUser()">
+
+<button onclick="register()">
 会員登録
 </button>
 
-<p id="userStatus">
-未ログイン
+
+</section>
+
+
+
+
+<section class="payment">
+
+
+<h2>💎 プレミアムサービス</h2>
+
+
+<p>
+月額980円で特別機能を利用できます。
 </p>
 
+
+<button onclick="payment()">
+購入する
+</button>
+
+
 </section>
 
-<!-- ショップ -->
-<section class="shop">
 
-<h2>💎 課金アイテムショップ</h2>
 
-<div class="item">
-
-<img src="images/item1.png" class="itemImage" alt="コイン100個">
-
-<h3>コイン100個</h3>
-
-<p>価格：120円</p>
-
-<button onclick="buyItem('コイン100個')">
-購入する
-</button>
-
-</div>
-
-<div class="item">
-
-<img src="images/item2.png" class="itemImage" alt="プレミアムキャラクター">
-
-<h3>プレミアムキャラクター</h3>
-
-<p>価格：500円</p>
-
-<button onclick="buyItem('プレミアムキャラクター')">
-購入する
-</button>
-
-</div>
-
-<div class="item">
-
-<img src="images/item3.png" class="itemImage" alt="広告削除">
-
-<h3>広告削除</h3>
-
-<p>価格：980円</p>
-
-<button onclick="buyItem('広告削除')">
-購入する
-</button>
-
-</div>
-
-</section>
 
 <footer>
 
 <p>
-©2026 My Game Shop
+© 2026 My Game Service
 </p>
 
 </footer>
 
+
+
+
 <script>
+
 
 function playGame(){
 
-    alert("ゲームを起動します");
+alert("ゲームを開始します");
 
 }
+
+
 
 function login(){
 
-    document.getElementById("userStatus").innerHTML =
-    "ログインしました";
+alert("ログイン画面へ移動します");
 
 }
 
-function registerUser(){
 
-    document.getElementById("userStatus").innerHTML =
-    "会員登録しました";
+
+function register(){
+
+alert("会員登録画面へ移動します");
+
+}
+
+
+
+function payment(){
+
+alert("決済ページへ移動します");
 
 }
 
-function buyItem(item){
 
-    alert(item + " の購入ページへ移動します");
-
-}
 
 </script>
+
+
 
 </body>
 
