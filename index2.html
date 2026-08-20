@@ -1,159 +1,32 @@
-<!DOCTYPE html>
-<html lang="ja">
-
-<head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>My Game Service</title>
-
-<link rel="stylesheet" href="style.css">
-
-</head>
-
-
-<body>
-
-
-<header>
-
-<img src="images/OHT86_tudukukoudainanouchi_TP_V%20(1)%20(2).jpg"
-class="gameImage"
-alt="ゲーム画像">
-
-<h1>My Game Service</h1>
-
-<p>
-最高のゲーム体験を提供するゲームサービス
-</p>
-
-</header>
-
-
-
-<section class="game">
-
-<h2>🎮 ゲーム紹介</h2>
-
-
-<!-- ゲーム画像 -->
-
-<img src="OHT86_tudukukoudainanouchi_TP_V (1) (2).jpg" 
-     class="gameImage" 
-     >
-
-
-<p>
-Unityで制作したオリジナルゲームです。
-</p>
-
-
-<button onclick="playGame()">
-
-ゲームをプレイ
-
-</button>
-
-
-</section>
-
-
-
-
-<section class="member">
-
-<h2>👤 会員管理</h2>
-
-
-<p>
-会員登録するとプレミアム機能を利用できます。
-</p>
-
-
-<button onclick="login()">
-ログイン
-</button>
-
-
-<button onclick="register()">
-会員登録
-</button>
-
-
-</section>
-
-
-
-
-<section class="payment">
-
-<h2>💎 プレミアムサービス</h2>
-
-
-<p>
-月額980円で特別機能を利用できます。
-</p>
-
-
-<button onclick="payment()">
-購入する
-</button>
-
-
-</section>
-
-
-
-
-<footer>
-
-<p>
-©2026 My Game Service
-</p>
-
-</footer>
-
-
-
-<script>
-
-
-function playGame(){
-
-alert("ゲームを開始します");
-
+using Microsoft.EntityFrameworkCore;
+using Shop.Models;
+
+namespace Shop.Data;
+
+public class OrderDbContext
+    : DbContext
+{
+    public OrderDbContext(
+        DbContextOptions<OrderDbContext> options)
+        : base(options)
+    {
+    }
+
+
+    public DbSet<Order> Orders =>
+        Set<Order>();
+
+
+    protected override void OnModelCreating(
+        ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Order>()
+            .HasIndex(
+                x => x.OrderNumber
+            )
+            .IsUnique();
+    }
 }
-
-
-function login(){
-
-alert("ログイン画面へ移動します");
-
-}
-
-
-function register(){
-
-alert("会員登録画面へ移動します");
-
-}
-
-
-function payment(){
-
-alert("決済ページへ移動します");
-
-}
-
-
-</script>
-
-
-</body>
-
-</html>
 
 
 
