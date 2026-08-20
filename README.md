@@ -15,7 +15,7 @@
 
 <header>
     <h1>🔥 期間限定セール 🔥</h1>
-    <p>今だけ50%OFF！</p>
+    <p>今だけ5%OFF！</p>
 </header>
 
 
@@ -30,11 +30,11 @@
 
         <p class="normal-price">
             通常価格
-            <span>3,980円</span>
+            <span>5,980円</span>
         </p>
 
         <p class="sale-price">
-            1,980円
+            3,980円
         </p>
 
         <p class="discount">
